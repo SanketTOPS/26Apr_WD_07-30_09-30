@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Switch Case Example in JS</h1>
+    <hr>
+
+
+    <script>
+        //Dynamic - User input
+        var n1 = prompt("Enter Number1:")
+        var n2 = prompt("Enter Number2:")
+        var choice = prompt("Enter any choice:")
+        var ans;
+
+
+        /*switch (choice) {
+            case '+':
+                var ans = Number(n1) + Number(n2)
+                alert("Sum is:" + ans)
+                break;
+
+            case '-':
+                var ans = Number(n1) - Number(n2)
+                alert("Sub is:" + ans)
+                break;
+
+            case '*':
+                var ans = Number(n1) * Number(n2)
+                alert("Mul is:" + ans)
+                break;
+
+            case '/':
+                var ans = Number(n1) / Number(n2)
+                alert("Div is:" + ans)
+                break;
+
+            default:
+                alert("Error!Invalid Choice...")
+                break;
+        }*/
+
+        if (choice == '+') {
+            ans = Number(n1) + Number(n2)
+            alert("Sum:" + ans)
+        }
+        else if (choice == '-') {
+            ans = Number(n1) - Number(n2)
+            alert("Sub:" + ans)
+        }
+        else if (choice == '*') {
+            ans = Number(n1) * Number(n2)
+            alert("Mul:" + ans)
+        }
+        else if (choice == '/') {
+            ans = Number(n1) / Number(n2)
+            alert("Div:" + ans)
+        }
+        else {
+            alert("Error!Invalid Choice...")
+        }
+
+
+    </script>
+</body>
+
+</html>
