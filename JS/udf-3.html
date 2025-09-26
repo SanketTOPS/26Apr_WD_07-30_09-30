@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDF - Calc</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">
+        UDF - Calc Example
+    </h1>
+
+    <hr>
+    <script>
+        function add(a, b) {
+            console.log("Sum:", a + b)
+        }
+
+        function sub(a, b) {
+            console.log("Sub:", a - b)
+        }
+
+        function mul(a, b) {
+            console.log("Mul:", a * b)
+        }
+
+        function div(a, b) {
+            console.log("Div:", a / b)
+        }
+
+        let n1 = parseInt(prompt("Enter Number1:"))
+        let n2 = parseInt(prompt("Enter Number2:"))
+        let choice = prompt("Select any one choice for oper.:")
+
+        switch (choice) {
+            case '1':
+                add(n1, n2)
+                break;
+
+            case '2':
+                sub(n1, n2)
+                break;
+
+            case '3':
+                mul(n1, n2)
+                break;
+
+            case '4':
+                div(n1, n2)
+                break;
+
+            default:
+                alert("Error!Invalid Choice...")
+                break;
+        }
+    </script>
+</body>
+
+</html>
