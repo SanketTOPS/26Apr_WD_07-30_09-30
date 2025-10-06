@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-2</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">DOM Example-2</h1>
+    <hr>
+
+
+    <p id="par">The document object representsthe whole html document.
+        When html document is loaded in the browser, it becomes a document
+        object. It is the root element that representsthe html document.
+        It has properties and methods. By the help of document object, we can
+        add dynamic content to our web page.</p>
+
+
+    <button onclick=btnClick()>Click Me!</button>
+    <script>
+
+
+        function btnClick() {
+            //document.querySelector("p").style.color.red
+            //document.getElementById("par").style.color = "red"
+            document.getElementById("par").style.fontSize = "50%"
+            console.log("Button Clicked!")
+        }
+
+
+    </script>
+</body>
+
+</html>

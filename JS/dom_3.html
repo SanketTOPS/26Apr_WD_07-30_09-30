@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exmple-3</title>
+</head>
+
+<body style="background-color: aliceblue;">
+
+    <h1 style="text-align: center;">DOM Exmple-3</h1>
+    <hr>
+
+    <h2 id="std">Hello Students!</h2>
+
+    <button onclick=btnClick()>Click Me!</button>
+
+
+    <script>
+        function btnClick() {
+            document.getElementById("std").innerText = "Good Morning!"
+            document.getElementById("std").style.color = "green"
+            document.getElementById("std").style.fontSize = "50px"
+        }
+
+    </script>
+</body>
+
+</html>
