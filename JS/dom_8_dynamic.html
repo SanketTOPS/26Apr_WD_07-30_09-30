@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-8</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-8</h1>
+    <hr>
+
+    <div id="box">
+
+    </div>
+
+    <button onclick=btnAdd()>Add Para!</button>
+    <button onclick=btnRemove()>Remove Para!</button>
+
+    <script>
+        function btnAdd() {
+            let box = document.getElementById("box");
+
+            let para = document.createElement('p');
+            para.innerText = "Hello Students! This is Dynamic"
+            box.appendChild(para)
+        }
+
+        function btnRemove() {
+            let box = document.getElementById("box");
+            box.remove();
+        }
+    </script>
+
+    </div>
+
+
+
+</body>
+
+</html>

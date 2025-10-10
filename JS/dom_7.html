@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-7</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-7</h1>
+    <hr>
+
+    <h2 id="txt">This is Text!</h2>
+    <button onclick=btnClick()>Click Me!</button>
+
+    <script>
+
+        function btnClick() {
+            let txt = document.getElementById("txt");
+            txt.style.color = "red";
+            txt.style.fontSize = "30px";
+        }
+    </script>
+</body>
+
+</html>
