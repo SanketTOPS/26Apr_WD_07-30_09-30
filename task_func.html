@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDF-Task</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">UDF Task</h1>
+    <hr>
+    <script>
+
+        function getsum() {
+            let no1 = parseInt(prompt("Enter Number 1:"))
+            let no2 = parseInt(prompt("Enter Number 2:"))
+            let sum = no1 + no2
+            //console.log("Sum:", sum)
+            alert("Sum:" + sum)
+
+        }
+
+        let x = true //bool
+        while (x) //TRUE
+        {
+            //function calling
+            getsum()
+            x = confirm("Do you want to continue? Yes/No")
+        }
+
+    </script>
+</body>
+
+</html>

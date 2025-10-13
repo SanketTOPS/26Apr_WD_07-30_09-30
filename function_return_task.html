@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Task</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Function Return Task</h1>
+    <hr>
+
+    <script>
+        function getdata(id, name) {
+            //return { 'id': id, 'name': name } //object type
+            return [id, name] //array type
+        }
+
+        /*function printdata(x) {
+            console.log("ID:", x.id)
+            console.log("Name:", x.name)
+        }*/
+
+        /*function printdata(x) {
+            console.log("ID:", x[0])
+            console.log("Name:", x[1])
+        }*/
+
+        /*let user = getdata(101, "Sanket")
+        printdata(user)*/
+
+
+        function printdata() {
+            let x = getdata(1, 'Nirav')
+            console.log("ID:", x[0])
+            console.log("Name:", x[1])
+        }
+
+        printdata()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Event Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Windows / Browser Event's</h1>
+    <hr>
+
+    <h2 id="msg"></h2>
+    <script>
+        //1.
+        /*window.addEventListener("load", function () {
+            alert("Your page is loaded!")
+        })*/
+
+        //2.
+        window.addEventListener("resize", function () {
+            let msg = document.getElementById("msg");
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            msg.innerText = 'Width:' + w + " " + "Height:" + h;
+        })
+    </script>
+
+
+</body>
+
+</html>

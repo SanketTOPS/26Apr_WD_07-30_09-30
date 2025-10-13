@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Form Event Example</h1>
+    <hr>
+
+    <input type="text" id="txt" placeholder="Enter Name">
+
+    <p id="msg"></p>
+
+    <script>
+        let txt = document.getElementById("txt");
+        let msg = document.getElementById("msg");
+
+
+        //1.
+        txt.addEventListener("focus", function () {
+            //txt.style.border = "2px"
+            txt.style.backgroundColor = "skyblue";
+            msg.innerText = "This is form focus event!"
+        })
+
+        //2.
+        txt.addEventListener("blur", function () {
+            txt.style.backgroundColor = "white";
+            msg.innerText = "This is form blur event!"
+        })
+
+    </script>
+
+</body>
+
+</html>

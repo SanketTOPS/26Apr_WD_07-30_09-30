@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Keyboard Event Example</h1>
+    <hr>
+
+    <input type="text" id="txt" placeholder="Start typing...">
+
+    <h3 id="msg"></h3>
+
+    <script>
+        let txt = document.getElementById("txt");
+        let msg = document.getElementById("msg");
+
+        //1.
+        txt.addEventListener("keydown", function () {
+            msg.innerText = "Key is pressed...!"
+        })
+
+        //2.
+        txt.addEventListener("keyup", function () {
+            msg.innerText = "Your Text is:" + txt.value;
+        })
+
+
+    </script>
+</body>
+
+</html>

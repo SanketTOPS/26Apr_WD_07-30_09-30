@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-11</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-11</h1>
+    <hr>
+
+    <div id="product">
+
+    </div>
+
+    <button id="btnAdd">Add Product</button>
+    <button id="btnRemove">Remove Product</button>
+
+    <script>
+
+        let proList = ["Mouse", "Laptop", "Mobile", "TV", "Keyboard"]
+        let divPro = document.getElementById("product");
+        let add = document.getElementById("btnAdd");
+        add.addEventListener("click", function () {
+
+            let p = document.createElement("p");
+            p.innerText = proList[0];
+            divPro.appendChild(p);
+        })
+
+
+    </script>
+
+    </div>
+
+
+
+</body>
+
+</html>

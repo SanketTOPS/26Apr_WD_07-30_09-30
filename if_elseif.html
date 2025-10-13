@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else-IF</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Else-IF Example in JS</h1>
+    <hr>
+    <script>
+        //If-Elseif
+
+        /*var n = 0;
+        if (n > 0) {
+            console.log("Number is +ve");
+        }
+        else if (n < 0) {
+            console.log("Number is -ve");
+        }
+        else {
+            console.log("Number is ZERO!");
+        }*/
+
+
+        //Marksheet
+
+        var s1 = 48, s2 = 69, s3 = 45, s4 = 67;
+
+        if (s1 >= 40 && s2 >= 40 && s3 >= 40 && s4 >= 40) //root - parent
+        {
+            var total = s1 + s2 + s3 + s4;
+            console.log("Total:", total);
+
+            var pr = total / 4;
+            console.log("PR:", pr);
+
+            if (pr >= 70) //child
+            {
+                console.log("Result:Dist.");
+            }
+            else if (pr >= 60) //child 
+            {
+                console.log("Result:First Class");
+            }
+            else if (pr >= 50) //child
+            {
+                console.log("Result:Second Class");
+            }
+            else if (pr >= 40) //child 
+            {
+                console.log("Result:Pass Class");
+            }
+        }
+        else {
+            console.log("Result:FAIL");
+        }
+    </script>
+</body>
+
+</html>

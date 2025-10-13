@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-10</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-10</h1>
+    <hr>
+
+    <div id="box">
+
+    </div>
+
+    <button id="btnAdd">Add Para!</button>
+    <button id="btnRemove">Remove Para!</button>
+
+    <script>
+
+        let box = document.getElementById("box");
+
+        let btnAdd = document.getElementById("btnAdd");
+        btnAdd.addEventListener("click", function () {
+            let p = document.createElement("p");
+            p.innerText = "Hello Students!";
+            box.appendChild(p)
+        })
+
+        let btnRemove = document.getElementById("btnRemove");
+        btnRemove.addEventListener("click", function () {
+            if (box.lastChild) {
+                box.removeChild(box.lastChild)
+            }
+        })
+    </script>
+
+    </div>
+
+
+
+</body>
+
+</html>

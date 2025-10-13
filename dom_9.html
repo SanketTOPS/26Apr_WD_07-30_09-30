@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-9</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-9</h1>
+
+    <hr>
+
+    <h1 id="txt">Hello Students!</h1>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+
+            let txt = document.getElementById("txt");
+            txt.style.color = "red";
+            txt.style.fontSize = "40px";
+        })
+    </script>
+
+</body>
+
+</html>

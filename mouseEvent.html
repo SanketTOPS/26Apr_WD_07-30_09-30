@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Mouse Event Example</h1>
+    <hr>
+
+    <h2 id="msg">Mouse Event's</h2>
+
+    <div style="width: 200px;height: 200px;background-color: brown;border-radius: 10px;" id="box"></div>
+
+    <script>
+
+        let box = document.getElementById("box");
+        let msg = document.getElementById("msg");
+
+        //1.
+        box.addEventListener("click", function () {
+            //fun.body
+            msg.innerText = "Mouse Clicked!";
+            box.style.backgroundColor = "skyblue";
+        })
+
+
+        //2.
+        box.addEventListener("dblclick", function () {
+            msg.innerText = "Double Click detected!";
+            box.style.backgroundColor = "lightgreen";
+        })
+
+        //3.
+        box.addEventListener("mouseover", function () {
+            //fun.body
+            msg.innerText = "Mouse Over!";
+            box.style.backgroundColor = "orange";
+        })
+
+        //4.
+        box.addEventListener("mouseout", function () {
+            //fun.body
+            msg.innerText = "Mouse Out!";
+            box.style.backgroundColor = "skyblue";
+        })
+
+        //5.
+        box.addEventListener("mousemove", function (e) {
+            //fun.body
+            let x = e.offsetX;
+            let y = e.offsetY;
+            msg.innerText = "Mouse Move: X:${x},Y:${y}";
+            console.log(x)
+            console.log(y)
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example-4</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Example-4</h1>
+    <hr>
+
+    <input type="text" placeholder="Name" id="name"><br><br>
+    <input type="email" placeholder="Email" id="email"><br><br>
+    <input type="text" placeholder="City" id="city"><br><br>
+    <button onclick=getData()>Submit</button>
+
+    <hr>
+
+    <h3>Students's Data</h3>
+    <p id="par"></p>
+
+    <script>
+        function getData() {
+            let nm = document.getElementById("name").value
+            let em = document.getElementById("email").value
+            let ct = document.getElementById("city").value
+
+            //let data = "Name:" + nm + "<br>" + "Email:" + em + "<br>" + "City:" + ct
+
+            let data = nm + "<br>" + em + "<br>" + ct
+
+            document.getElementById("par").innerHTML = data
+
+        }
+    </script>
+</body>
+
+</html>

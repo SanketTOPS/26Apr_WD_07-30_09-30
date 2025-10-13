@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event-3</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Form Event-3</h1>
+    <hr>
+
+    <select id="city">
+        <option value="Rajkot">Rajkot</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Baroda">Baroda</option>
+        <option value="Surat">Surat</option>
+        <option value="Jamnagar">Jamnagar</option>
+    </select>
+
+    <h3 id="msg"></h3>
+
+    <script>
+        let city = document.getElementById("city");
+        let msg = document.getElementById("msg");
+
+        city.addEventListener("change", function () {
+            let x = city.value;
+            if (x) {
+                msg.innerText = x;
+            }
+            else {
+                msg.innerText = ""
+            }
+        })
+    </script>
+</body>
+
+</html>
