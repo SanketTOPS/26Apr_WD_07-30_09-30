@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery_13 Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery_13 Demo - Form Handling </h1>
+    <hr>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <select id="course">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JS</option>
+        <option>JQuery</option>
+    </select>
+    <button id="btn">Show</button>
+
+    <p id="show"></p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var name = $("#name").val();
+                var course = $("#course").val();
+
+                $("#show").html("Hello, <b>" + name + "</b>, Your Course is <b>" + course + "</b>");
+            });
+        });
+    </script>
+</body>
+
+</html>

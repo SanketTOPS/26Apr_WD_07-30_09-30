@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ-1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery Demo-1</h1>
+    <hr>
+
+
+    <h2 id="title">Hello Students! Good Morning...</h2>
+    <p class="p">This is JQuery Demo-1</p>
+    <button id="btn">Click Me</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#title").text("This is Text Changed!");
+                $(".p").css("color", "blue");
+            })
+        })
+    </script>
+</body>
+
+</html>

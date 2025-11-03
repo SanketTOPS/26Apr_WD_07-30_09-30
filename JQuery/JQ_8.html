@@ -1,0 +1,46 @@
+<!-- DOM Manipulation using JQuery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation using JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">DOM Manipulation using JQuery</h1>
+    <hr>
+
+    <input type="text" id="txt" placeholder="Add Item">
+    <button id="btn">Add Item</button>
+    <button id="remove">Remove List</button>
+    <button id="empty">Empty List</button>
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                //$("#list").append("<li>JQuery</li>");
+                let n = $("#txt").val();
+                $("#list").append("<li>" + n + "</li>");
+            });
+
+            $("#remove").click(function () {
+                $("#list").remove();
+            })
+
+            $("#empty").click(function () {
+                $("#list").empty();
+            })
+        });
+    </script>
+</body>
+
+</html>

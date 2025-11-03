@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery_10 Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery_10 Demo - JQuery Traversing </h1>
+    <hr>
+
+    <div id="box" style="padding: 10px;border: 2px solid red;">
+        <p>This is <span> This is Child </span>inside para.</p>
+    </div>
+
+    <button id="btn1">Find Parent</button>
+    <button id="btn2">Find Child</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("span").parent().css("border", "2px solid green");
+            });
+            $("#btn2").click(function () {
+                $("#box").children().css("background-color", "lightblue");
+            });
+        });
+    </script>
+</body>
+
+</html>

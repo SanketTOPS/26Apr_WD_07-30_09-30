@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+
+    <h1 style="text-align: center;">Dynamic To-Do List</h1>
+    <hr>
+    <input type="text" id="txt" placeholder="Add Task">
+
+    <button id="btnadd">Add Task</button>
+    <button id="btndelete">Delete Task</button>
+
+    <ul id="tasklist"></ul>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnadd").click(function () {
+                var n = $("#txt").val();
+                $("#tasklist").append("<li>" + n + "</li>");
+                $("#txt").val("");
+            });
+
+            $("#btndelete").click(function () {
+                /*$("#tasklist").parent().fadeOut(300, function () {
+                    $(this).remove();
+                });*/
+
+                var lastitem = $("#tasklist li:last");
+                lastitem.fadeOut(400, function () {
+                    $(this).remove();
+                });
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

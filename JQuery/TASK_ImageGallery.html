@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Task</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Image Gallery Task in JQuery</h1>
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1761960083604-773174ef0f26?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=872"
+        id="gallery" height="300" width="500">
+    <br>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        $(document).ready(function () {
+            var imgs = ["https://images.unsplash.com/photo-1761960083604-773174ef0f26?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=872",
+                "https://images.unsplash.com/photo-1762029261747-e9dea65803fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871",
+                "https://images.unsplash.com/photo-1761839257469-96c78a7c2dd3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=869",
+                "https://images.unsplash.com/photo-1761839257144-297ce252742e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+            ];
+
+
+            var index = 0;
+            $("#next").click(function () {
+                index = (index + 1) % imgs.length;
+                $("#gallery").fadeOut(500, function () {
+                    $(this).attr("src", imgs[index]).fadeIn(500);
+                });
+            });
+
+            $("#prev").click(function () {
+                index = (index - 1 + imgs.length) % imgs.length;
+                $("#gallery").fadeOut(500, function () {
+                    $(this).attr("src", imgs[index]).fadeIn(500);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

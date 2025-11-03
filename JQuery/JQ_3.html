@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ-3</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery Demo-3</h1>
+    <hr>
+
+    <img id="myimg"
+        src="https://plus.unsplash.com/premium_photo-1761167849044-27748febd0b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=875"
+        height="300">
+
+    <button id="fadeout">Fade Out</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadetoggle">Fade Toggle</button>
+    <button id="fadeto">Fade To</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#fadeout").click(function () {
+                $("#myimg").fadeOut();
+            })
+            $("#fadein").click(function () {
+                $("#myimg").fadeIn();
+            })
+            $("#fadetoggle").click(function () {
+                $("#myimg").fadeToggle();
+            })
+            $("#fadeto").click(function () {
+                $("#myimg").fadeTo();
+            })
+        });
+    </script>
+
+</body>
+
+</html>

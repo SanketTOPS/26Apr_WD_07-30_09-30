@@ -1,0 +1,38 @@
+<!-- JQuery Form Event Handling -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Form Event Handling</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery Form Event Handling</h1>
+    <hr>
+
+    <input type="text" placeholder="Enter Name" id="name">
+
+    <p id="msg"></p>
+
+    <script>
+        $(document).ready(function () {
+            $("#name").focus(function () {
+                $(this).css("background-color", "lightyellow");
+            })
+
+            $("#name").blur(function () {
+                $(this).css("background-color", "white");
+                $("#msg").text("Your Name:" + $(this).val());
+            })
+
+        });
+    </script>
+
+
+</body>
+
+</html>

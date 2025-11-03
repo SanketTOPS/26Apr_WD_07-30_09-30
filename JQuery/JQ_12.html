@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery_12 Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">JQuery_12 Demo - JQuery Animation </h1>
+    <hr>
+
+    <div id="box" style="height: 100px;width: 100px;background-color: brown;">
+    </div>
+
+    <br><br>
+    <button id="move">Move</button>
+    <button id="grow">Grow</button>
+    <button id="reset">Reset</button>
+    <button id="anim">Animation</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#move").click(function () {
+                $("#box").animate({ marginLeft: '300px' }, 2000);
+            });
+
+            $("#grow").click(function () {
+                $("#box").animate({ width: '200px', height: '200px' }, 1000);
+            });
+
+            $("#reset").click(function () {
+                $("#box").animate({ width: '100px', height: '100px', marginLeft: '0px' }, 500);
+            });
+
+            $("#anim").click(function () {
+                $("#box").animate({ left: '100px' })
+                    .animate({ top: '100px' })
+                    .fadeOut(500)
+                    .fadeIn(500);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
