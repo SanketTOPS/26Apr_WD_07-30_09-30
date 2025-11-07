@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ Dynamic Task</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50px;
+            box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        th,
+        td {
+            border: 2px solid lightgreen;
+            padding: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            padding: 10px;
+            background-color: bisque;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: rgb(208, 236, 125);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JQ Dynamic Demo</h1>
+    <hr>
+    <input type="text" placeholder="Firstname" id="fnm">
+    <input type="text" placeholder="Lastname" id="lnm">
+    <button id="btnAdd">Add to Table</button>
+
+    <table id="stData">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btnAdd").click(function () {
+                let fnm = $('#fnm').val();
+                let lnm = $('#lnm').val();
+                let newRow = '<tr><td>' + fnm + '</td><td>' + lnm + '</td></tr>';
+                $('#stData').append(newRow);
+
+                $('#fnm').val("");
+                $('#lnm').val("");
+            });
+        });
+    </script>
+</body>
+
+</html>

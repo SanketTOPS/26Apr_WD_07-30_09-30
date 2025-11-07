@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store API - AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Fake Store API - AJAX</h1>
+    <hr>
+
+
+    <table border="2" id="storedata">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Price</th>
+            </tr>
+        <tbody>
+        </tbody>
+        </thead>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://fakestoreapi.com/products",
+                type: "GET",
+                success: function (products) {
+                    for (let i of products) {
+                        $("#storedata tbody").append(
+                            `<tr>
+                                <td>${i.id}</td>
+                                <td>${i.title}</td>
+                                <td><img src=${i.image} height=100px></td>
+                                <td>${i.price}</td>
+                            </tr>`
+                        );
+                    }
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
