@@ -1,0 +1,21 @@
+$colors:red,green,blue;
+
+$spacing:5px 10px 15px 20px;
+
+$font-size:15px 20px 35px 60px;
+
+$new-colcor:append($colors,yellow);
+$list1: 10px, 20px;
+$list2: 30px, 40px;
+
+$final-list:join($list1, $list2);
+
+.box{
+    width: length($colors)*50px; //150px
+    padding: $final-list;
+}
+
+.text{
+    font-size: nth($font-size,3); //35px
+}
+

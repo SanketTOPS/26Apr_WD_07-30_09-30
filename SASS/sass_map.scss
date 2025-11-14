@@ -1,0 +1,15 @@
+$colors:(
+    primary:blue,
+    success:green,
+    danger:red
+);
+
+.btn-primary{
+    background: map-get($colors,primary);
+}
+
+@each $k,$v in $colors{
+    .txt-#{$k}{
+        color: $v;
+    }
+}

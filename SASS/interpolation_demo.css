@@ -1,0 +1,23 @@
+.primary-btn {
+  background-color: rgb(158, 231, 33);
+  color: white;
+}
+
+.box {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.txt-red {
+  color: red;
+}
+
+.txt-green {
+  color: green;
+}
+
+.txt-blue {
+  color: blue;
+}/*# sourceMappingURL=interpolation_demo.css.map */

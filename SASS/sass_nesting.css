@@ -1,0 +1,36 @@
+.card {
+  background-color: aqua;
+  padding: 20px;
+  border: 2px solid black;
+}
+.card:hover {
+  border-color: lightgreen;
+}
+.card:hover .title {
+  color: red;
+}
+.card h2 {
+  color: brown;
+}
+.card p {
+  color: gray;
+}
+
+.btn {
+  padding: 10px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.title {
+  font-size: 25px;
+}
+.title::after {
+  content: " ";
+  width: 60px;
+  height: 4px;
+  background: red;
+  display: block;
+}/*# sourceMappingURL=sass_nesting.css.map */

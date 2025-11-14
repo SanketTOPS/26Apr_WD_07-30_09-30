@@ -1,0 +1,27 @@
+$color-name:primary;
+
+
+//primary-btn
+.#{$color-name}-btn{
+    background-color: rgb(158, 231, 33);
+    color: white;
+}
+
+$prop:margin;
+$size:100px;
+
+.box{
+    #{$prop}-top:20px;
+    width: #{$size}; //100px;
+    height: #{$size}; //100px;
+    background-color: black;
+}
+
+
+$colors:red,green,blue;
+@each $i in $colors{
+    .txt-#{$i}{
+        color: $i;
+    }
+}
+

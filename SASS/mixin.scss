@@ -1,0 +1,28 @@
+@mixin demobox{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid lightcoral;
+    border-radius: 10px;
+}
+
+
+@mixin mybox($width,$height)
+{
+    width: $width;
+    height: $height;
+    background-color: lightblue;
+    border: 2px solid lightcoral;
+    border-radius: 10px;
+}
+.box{
+    @include demobox;
+}
+
+.box1{
+    @include mybox(200px,200px);
+}
+
+.box2{
+    @include mybox(300px,300px);
+}
