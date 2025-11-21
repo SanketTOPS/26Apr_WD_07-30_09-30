@@ -1,0 +1,9 @@
+$primary:blue;
+$secondary:yellow;
+
+
+@mixin democenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

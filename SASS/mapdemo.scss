@@ -1,0 +1,27 @@
+$colors:(
+    primary:blue,
+    secondary:yellow,
+    dark:black
+);
+
+
+$theme:(
+    light:(
+        bg:lightblue,
+        text:black
+    ),
+    dark:(
+        bg:black,
+        text:white
+    )
+);
+
+body{
+    background: map-get($map: map-get($theme,light), $key:bg);
+}
+
+$primaryColor:map-get($map: $colors, $key: primary);
+
+.box{
+    background-color:$primaryColor;
+}

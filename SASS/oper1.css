@@ -1,0 +1,33 @@
+.box {
+  width: 150px;
+  padding: 15px;
+}
+
+.container {
+  height: 200px;
+}
+
+title {
+  font-size: 30px;
+}
+
+.box2 {
+  width: 50px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+p {
+  margin-top: 15px;
+}
+
+.new {
+  width: 20px;
+  height: 30px;
+}/*# sourceMappingURL=oper1.css.map */

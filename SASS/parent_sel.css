@@ -1,0 +1,28 @@
+.btn-primary {
+  background: blue;
+}
+
+.link {
+  color: black;
+}
+.link:hover {
+  color: red;
+}
+
+.card::before {
+  content: " ";
+  display: block;
+}
+
+.box {
+  width: 200px;
+}
+@media (max-width: 600px) {
+  .box {
+    width: 100px;
+  }
+}
+
+.item + .item {
+  margin-top: 10px;
+}/*# sourceMappingURL=parent_sel.css.map */

@@ -1,0 +1,16 @@
+$primary:blue; //global
+
+body{
+    background: $primary;
+}
+
+//Local Scope
+
+.box{
+    $size:50px; /*Local*/
+}
+
+$size:50px; //Global
+.test{
+    width:$size;
+}

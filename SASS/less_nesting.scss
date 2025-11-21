@@ -1,0 +1,36 @@
+//Navbar Example
+
+
+$primary:blue;
+$secondary:rgb(81, 234, 39);
+$font-main:"Arial";
+$radius:10px;
+
+.navbar{
+    width: 100%;
+    background: $primary;
+    padding: 15px;
+
+
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+
+        li{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-family: $font-main;
+                font-size: 18px;
+
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}

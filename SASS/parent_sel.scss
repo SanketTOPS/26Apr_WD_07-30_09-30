@@ -1,0 +1,36 @@
+.btn{
+    &-primary{
+        background: blue;
+    }
+}
+
+.link{
+    color: black;
+
+    &:hover{
+        color: red;
+    }
+}
+
+.card{
+    &::before{
+        content: " ";
+        display: block;
+    }
+}
+
+.box{
+    width: 200px;
+
+    @media (max-width:600px){
+        &{
+            width: 100px;
+        }
+    }
+}
+
+.item{
+    & + &{
+        margin-top: 10px;
+    }
+}

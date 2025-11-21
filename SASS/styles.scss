@@ -1,0 +1,6 @@
+@use "colors.scss" as cl; //namespace
+
+.box{
+    color: cl.$primary;
+    @include cl.democenter;
+}

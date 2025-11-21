@@ -1,0 +1,46 @@
+body{
+    background-color: lightblue;
+}
+
+.card{
+    background-color: aqua;
+    padding: 20px;
+    border: 2px solid black;
+
+    &:hover{
+        border-color: lightgreen;
+
+        .title{
+            color: red;
+        }
+    }
+
+    h2{
+        color: brown;
+    }
+
+    p{
+        color: gray;
+    }
+}
+
+.btn{
+    padding: 10px;
+
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
+
+.title{
+    font-size: 25px;
+
+    &::after{
+        content: " ";
+        width: 60px;
+        height: 4px;
+        background: red;
+        display: block;
+    }
+}

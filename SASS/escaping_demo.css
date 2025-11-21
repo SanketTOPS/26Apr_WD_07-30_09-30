@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.icon {
+  content: "→";
+  content: "😀";
+  content: "🥳";
+}
+
+.btn-add-item {
+  color: red;
+}/*# sourceMappingURL=escaping_demo.css.map */

@@ -1,0 +1,17 @@
+.btn-primary {
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: rgb(222, 38, 145);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=less_mixin.css.map */

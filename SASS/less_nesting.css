@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  background: blue;
+  padding: 15px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Arial";
+  font-size: 18px;
+}
+.navbar ul li a:hover {
+  color: rgb(81, 234, 39);
+}/*# sourceMappingURL=less_nesting.css.map */

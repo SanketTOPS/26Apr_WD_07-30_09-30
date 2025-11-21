@@ -1,0 +1,35 @@
+//Mixin Example
+
+$primary:blue;
+$secondary:rgb(222, 38, 145);
+$font-main:"Arial";
+$radius:10px;
+
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin btn-style($bg,$fg){
+    padding: 10px 25px;
+    border-radius:$radius;
+    background:$bg;
+    color: $fg;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.btn-primary{
+    @include btn-style($secondary, black);
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background:$primary;
+    @include center();
+}

@@ -1,0 +1,11 @@
+//Escaping Char.
+
+.icon{
+    content: "\2192";
+    content: "\1F600";
+    content: "\1F973";
+}
+
+.btn-#{"add\-item"}{
+    color: red;
+}

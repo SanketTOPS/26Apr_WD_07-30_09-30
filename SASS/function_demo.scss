@@ -1,0 +1,21 @@
+//Function in SCSS
+
+
+@function double($value)
+{
+    @return $value * 2;
+}
+
+.box{
+    width: double(10px); //20px
+}
+
+
+@function area($w,$h)
+{
+    @return $w*$h;
+}
+
+.card{
+    height: area(10px,20px);
+}

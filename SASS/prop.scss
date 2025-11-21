@@ -1,0 +1,22 @@
+$prop:margin;
+
+$bg:red;
+
+.box{
+    #{$prop}:20px;
+    background-color: $bg;
+}
+
+
+$btn-style:(
+    padding:10px 20px,
+    background:blue,
+    color:white,
+    border-radius:10px
+);
+
+button{
+    @each $k,$v in $btn-style{
+        #{$k}:#{$v};
+    }
+}

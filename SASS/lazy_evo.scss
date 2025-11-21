@@ -1,0 +1,41 @@
+$size:10px * 50;
+
+.box{
+    width: $size; //Value Evalates
+}
+
+
+$base:10px;
+$newsize:$base * 5; //50
+
+$base:20px; //New Value
+
+.newbox{
+    width: $newsize;
+}
+
+
+$price:100;
+$gst:$price * 0.18;
+
+$price:200;
+
+.final{
+    content: $gst;
+}
+
+
+
+@function mycalc($w,$h){
+    @return $w*$h;
+}
+
+$width:10;
+$height:20;
+
+$width:15; //Updatetd Value
+
+.box{
+    content: mycalc($width,$height);
+}
+

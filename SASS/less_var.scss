@@ -1,0 +1,15 @@
+//Variables Example
+
+$primary:blue;
+$secondary:yellow;
+$font-main:"Arial";
+$radius:10px;
+
+.mycls{
+    background-color: $primary;
+}
+
+.btn{
+    color: $secondary;
+    font-family: $font-main;
+}
