@@ -1,0 +1,38 @@
+.message{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.success{
+    @extend .message;
+    background: green;
+    color: white;
+}
+
+.error{
+    @extend .message;
+    background: red;
+    color: white;
+}
+
+.container{
+    .warning{
+        @extend .message;
+        background: yellow;
+    }
+}
+
+.card-base{
+    padding: 15px;
+    border: 2px solid lightcoral;
+}
+
+.wrapper{
+    .box{
+        .info{
+            @extend .card-base;
+            background: yellow;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.box-base{
+    padding: 20px;
+}
+
+.box{
+    @extend .box-base;
+}
+
+@media(max-width:600px){
+    .small{
+        @extend .box-base;
+    }
+}

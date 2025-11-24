@@ -1,0 +1,31 @@
+// Overloading Mixin
+
+@mixin box(){
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+@mixin box($color){
+    width: 100px;
+    height: 100px;
+    background: $color;
+}
+
+@mixin box($w,$h){
+    width: $w;
+    height: $h;
+    background-color: yellow;
+}
+
+.div1{
+    @include box();
+}
+
+.div2{
+    @include box($color:blue);
+}
+
+.div3{
+    @include box($w:200px,$h:150px);
+}

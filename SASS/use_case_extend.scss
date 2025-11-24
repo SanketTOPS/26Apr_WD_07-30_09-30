@@ -1,0 +1,14 @@
+%btn{
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+%btn:hover{
+    background: lightblue;
+    color: white;
+}
+
+.btn-large{
+    @extend %btn all;
+    
+}

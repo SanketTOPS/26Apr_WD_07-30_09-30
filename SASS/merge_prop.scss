@@ -1,0 +1,14 @@
+.box{
+    border: {
+        style:solid;
+        width: 2px;
+        color: red;
+    }
+}
+
+.newbox{
+    margin:{
+        left:10px;
+        left:20px !merge;
+    }
+}

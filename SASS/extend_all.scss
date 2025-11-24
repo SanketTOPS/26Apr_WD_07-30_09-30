@@ -1,0 +1,14 @@
+.button{
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background: blue;
+    color: white;
+}
+
+.call-button{
+    @extend .button all;
+    
+}

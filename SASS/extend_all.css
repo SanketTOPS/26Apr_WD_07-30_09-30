@@ -1,0 +1,9 @@
+.button, .call-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button:hover, .call-button:hover {
+  background: blue;
+  color: white;
+}/*# sourceMappingURL=extend_all.css.map */

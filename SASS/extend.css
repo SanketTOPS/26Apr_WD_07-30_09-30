@@ -1,0 +1,28 @@
+.message, .container .warning, .error, .success {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.success {
+  background: green;
+  color: white;
+}
+
+.error {
+  background: red;
+  color: white;
+}
+
+.container .warning {
+  background: yellow;
+}
+
+.card-base, .wrapper .box .info {
+  padding: 15px;
+  border: 2px solid lightcoral;
+}
+
+.wrapper .box .info {
+  background: yellow;
+}/*# sourceMappingURL=extend.css.map */

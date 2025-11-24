@@ -1,0 +1,14 @@
+@mixin box-style{
+    padding: 20px;
+}
+
+.box{
+    @include box-style;
+}
+
+@media (max-width:600px)
+{
+    .small{
+        @include box-style;
+    }    
+}

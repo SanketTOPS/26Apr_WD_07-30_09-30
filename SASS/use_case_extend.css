@@ -1,0 +1,9 @@
+.btn-large {
+  padding: 12px 25px;
+  border-radius: 5px;
+}
+
+.btn-large:hover {
+  background: lightblue;
+  color: white;
+}/*# sourceMappingURL=use_case_extend.css.map */
