@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - Object Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Class - Object Example</h1>
+    <hr>
+
+    <script>
+        class Student {
+            constructor(name, marks) {
+                this.name = name;
+                this.marks = marks;
+            }
+
+            getResult() {
+                if (this.marks >= 40) {
+                    console.log("Result is Pass!")
+                }
+                else {
+                    console.log("Result is Fail!")
+                }
+            }
+        }
+
+        // User - Input
+        let nm = prompt("Enter Student Name:")
+        let mark = Number(prompt("Enter Marks:"))
+
+        // Object Create
+        let s1 = new Student(nm, mark)
+
+        console.log("Student Name:", s1.name)
+        console.log("Marks:", s1.marks)
+        s1.getResult()
+
+    </script>
+</body>
+
+</html>

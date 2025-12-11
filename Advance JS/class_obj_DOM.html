@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - Object with DOM</title>
+    <style>
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1
+        style="text-align: center;color: blue;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Class - Object with DOM</h1>
+    <hr>
+
+    <div>
+        <input type="text" id="name" placeholder="Enter Name"><br><br>
+        <input type="number" id="mark" placeholder="Enter Marks"><br><br>
+        <button onclick="addStudents()">Add Student</button>
+    </div>
+
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultData">
+
+        </tbody>
+    </table>
+
+    <script>
+        class Student {
+            constructor(name, marks) {
+                this.name = name;
+                this.marks = marks;
+            }
+
+            getResult() {
+                if (this.marks >= 40) {
+                    console.log("PASS")
+                }
+                else {
+                    console.log("FAIL")
+                }
+            }
+        }
+
+        let Stdata = []; //Array
+        function addStudents() {
+            let nm = document.getElementById("name").value;
+            let mk = Number(document.getElementById("mark").value);
+
+            let st = new Student(nm, mk);
+            Stdata.push(st);
+
+            document.getElementById("name").value = "";
+            document.getElementById("mark").value = "";
+
+            displayResult();
+        }
+
+        function displayResult() {
+            let tbl = document.getElementById("resultData");
+
+            tbl.innerHTML = ""; //clear old rows
+            for (let i = 0; i < Stdata.length; i++) {
+                let row = `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${Stdata[i].name}</td>
+                        <td>${Stdata[i].marks}</td>
+                        <td>${Stdata[i].getResult()}</td>
+                    </tr>
+                `;
+                tbl.innerHTML += row;
+            }
+        }
+    </script>
+</body>
+
+</html>

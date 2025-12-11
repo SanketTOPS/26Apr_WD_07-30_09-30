@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - Object Example with Array</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Class - Object Example with Array</h1>
+    <hr>
+
+    <script>
+        class Student {
+            constructor(name, marks) {
+                this.name = name;
+                this.marks = marks;
+            }
+
+            getResult() {
+                if (this.marks >= 40) {
+                    console.log("Result is PASS!")
+                }
+                else {
+                    console.log("Result is FAIL!")
+                }
+            }
+        }
+        let n = Number(prompt("Enter number of students:"))
+
+        let stData = []; //Array
+
+        for (let i = 0; i < n; i++) {
+            let nm = prompt("Enter name of Student:")
+            let mk = Number(prompt("Enter marks of Student:"))
+
+            let st = new Student(nm, mk)
+            stData.push(st)
+        }
+
+        console.log("--------- FINAL RESLT ---------")
+
+        for (let i = 0; i < stData.length; i++) {
+            console.log(stData[i].name)
+            console.log(stData[i].marks)
+            console.log(stData[i].getResult())
+        }
+
+
+    </script>
+</body>
+
+</html>

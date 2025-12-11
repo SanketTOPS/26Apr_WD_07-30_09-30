@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDF-1</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: blue;">UDF in JS</h1>
+    <hr>
+
+    <script>
+        //function define
+        function getsum() {
+            var n1 = prompt("Enter Number1:")
+            var n2 = prompt("Enter Number2:")
+            var ans = Number(n1) + Number(n2)
+            //console.log("Sum:", ans)
+            alert("Sum:" + ans)
+        }
+
+        function getmul(n1, n2) {
+            return n1 * n2
+        }
+
+        //function calling
+        //getsum()
+
+        /*var ans = getmul(10, 5)
+        console.log(ans)*/
+
+
+        function answer() {
+            let x = getmul(23, 56)
+            console.log(x)
+        }
+
+        answer()
+    </script>
+</body>
+
+</html>

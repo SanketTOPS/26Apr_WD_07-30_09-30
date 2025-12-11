@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Inheritance</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: blue;">Simple Inheritance Example</h1>
+    <hr>
+
+    <script>
+        //Super - Parent
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        //Sub - Child
+        class Student extends Person {
+            constructor(name, sub) {
+                super(name);
+                this.sub = sub;
+            }
+        }
+
+        st = new Student("Sanket", "Python")
+        console.log(st)
+    </script>
+</body>
+
+</html>

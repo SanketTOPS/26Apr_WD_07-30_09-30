@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get-Set</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: blue;">Getter + Setter</h1>
+    <hr>
+
+    <script>
+        class Product {
+            constructor(price) {
+                this._price = price;
+            }
+            get price() {
+                return this._price;
+            }
+
+            set price(value) {
+                if (value > 0) {
+                    this._price = value;
+                }
+            }
+        }
+        let p = new Product(1500);
+        p.price = 1800;
+        console.log(p.price);
+    </script>
+</body>
+
+</html>

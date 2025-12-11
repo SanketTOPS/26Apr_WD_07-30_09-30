@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation Example</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: blue;">Encapsulation Example</h1>
+    <hr>
+
+    <script>
+        class Bank {
+            #bal = 10000; //private
+
+            showBalance(pin) {
+                if (pin === 1234) {
+                    console.log(this.#bal);
+                }
+                else {
+                    console.log("Error!Wrong Pin...");
+                }
+            }
+        }
+        b = new Bank();
+        b.showBalance(1235);
+    </script>
+</body>
+
+</html>
