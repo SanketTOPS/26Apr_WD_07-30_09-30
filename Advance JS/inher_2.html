@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Life Inheritance Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Real-Life Inheritance Example</h1>
+    <hr>
+
+    <script>
+        class Student {
+            constructor(name, sub) {
+                this.name = name;
+                this.sub = sub;
+            }
+
+            details() {
+                return `Name: ${this.name}, Subject:${this.sub}`
+            }
+        }
+        class Marks extends Student {
+            constructor(name, sub, mark) {
+                super(name, sub);
+                this.mark = mark;
+            }
+
+            result() {
+                return this.mark >= 40 ? "PASS" : "FAIL";
+            }
+        }
+
+        let mk = new Marks("Sanket", "Python", 28);
+        console.log(mk.details());
+        console.log("Marks:", mk.mark);
+        console.log("Result:", mk.result());
+    </script>
+</body>
+
+</html>

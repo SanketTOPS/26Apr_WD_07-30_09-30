@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Inheritance</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Simple Inheritance</h1>
+    <hr>
+
+    <script>
+        //Super Class
+        class Parent {
+            constructor() {
+                this.lastname = "Chauhan";
+            }
+        }
+        //Sub Class
+        class Child extends Parent {
+            constructor(name) {
+                super();
+                this.name = name;
+            }
+        }
+
+        let c = new Child("Sanket")
+        console.log(c.name);
+        console.log(c.lastname);
+    </script>
+
+</body>
+
+</html>

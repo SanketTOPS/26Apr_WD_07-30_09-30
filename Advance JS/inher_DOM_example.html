@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inherintance DOM Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Inherintance DOM Example</h1>
+    <hr>
+
+    <div>
+        <input type="text" id="pname" placeholder="Product Name"><br><br>
+        <input type="number" id="price" placeholder="Product Price"><br><br>
+        <select id="ptype">
+            <option value="mobile">Mobile</option>
+            <option value="laptop">Laptop</option>
+        </select>
+        <br><br>
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <ul id="plist">
+
+    </ul>
+
+    <script>
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            ProductInfo() {
+                return `${this.name} - Rs.${this.price}`;
+            }
+        }
+
+        class Mobile extends Product {
+            constructor(name, price) {
+                super(name, price);
+                this.ptype = "Mobile";
+            }
+
+            ProductInfo() {
+                return `${this.ptype} : ${super.ProductInfo()}`;
+            }
+        }
+
+        class Laptop extends Product {
+            constructor(name, price) {
+                super(name, price);
+                this.ptype = "Laptop";
+            }
+
+            ProductInfo() {
+                return `${this.ptype} : ${super.ProductInfo()}`;
+            }
+        }
+
+        function addProduct() {
+            let nm = document.getElementById("pname").value;
+            let pr = document.getElementById("price").value;
+            let ptype = document.getElementById("ptype").value;
+
+            let obj;
+
+            if (ptype === "mobile") {
+                obj = new Mobile(nm, pr);
+            }
+            else {
+                obj = new Laptop(nm, pr);
+            }
+
+            let li = document.createElement("li");
+            li.textContent = obj.ProductInfo();
+
+            document.getElementById("plist").appendChild(li);
+        }
+    </script>
+
+
+</body>
+
+</html>
