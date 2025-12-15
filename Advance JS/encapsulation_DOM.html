@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation - DOM</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Encapsulation - DOM</h1>
+
+
+    <input type="number" id="amt" placeholder="Enter amount">
+    <button onclick="withdraw()">withdraw</button>
+
+    <p id="result"></p>
+
+
+    <script>
+        class ATM {
+            #balance = 5000;
+
+            withdraw(amount) {
+                if (amount <= this.#balance) {
+                    this.#balance -= amount;
+                    return this.#balance;
+                } else {
+                    return "Insufficient balance";
+                }
+            }
+        }
+
+        let atm = new ATM();
+
+        function withdraw() {
+            let amt = Number(document.getElementById("amt").value);
+            document.getElementById("result").innerText = atm.withdraw(amt);
+        }
+    </script>
+</body>
+
+</html>

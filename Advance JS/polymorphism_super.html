@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Polymorhism - Super Method</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center; color: blue;">Basic Polymorhism - Super Method</h1>
+    <hr>
+
+    <script>
+        class User {
+            login() {
+                console.log("Basic login...");
+            }
+        }
+
+        class Admin extends User {
+            login() {
+                super.login(); //parent method
+                console.log("Admin Logged in Success!")
+            }
+        }
+
+        let ad = new Admin();
+        ad.login();
+    </script>
+
+</body>
+
+</html>

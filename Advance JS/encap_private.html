@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation - with Private</title>
+</head>
+
+<body style="background-color: aliceblue;">
+
+    <h1 style="text-align: center;color: blue;">Encapsulation - with Private</h1>
+    <hr>
+
+    <script>
+        class Bank {
+            #bal = 10000; //private var.
+
+            getBalance() {
+                return this.#bal;
+            }
+
+            deposite(amount) {
+                if (amount > 0) {
+                    this.#bal += amount;
+                }
+            }
+
+            withdraw(amount) {
+                if (amount <= this.#bal) {
+                    this.#bal -= amount;
+                }
+                else {
+                    console.log("Insufficient balance...")
+                }
+            }
+        }
+
+        let b = new Bank();
+        console.log(b.getBalance()); //10000
+        b.deposite(2000);
+        console.log(b.getBalance()); //10000
+        b.withdraw(3000);
+        console.log(b.getBalance()); //10000
+
+        //console.log(b.bal);
+    </script>
+</body>
+
+</html>

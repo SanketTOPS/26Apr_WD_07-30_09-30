@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Polymorhism - Method Overriding</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center; color: blue;">Basic Polymorhism - Method Overriding</h1>
+    <hr>
+
+    <script>
+        class User {
+            login() {
+                console.log("User logged in!");
+            }
+        }
+
+        class Student extends User {
+            login() {
+                console.log("Student logged in");
+            }
+        }
+
+        class Faculty extends User {
+            login() {
+                console.log("Faculty logged in");
+            }
+        }
+
+        let st = new Student()
+        let fc = new Faculty()
+
+        st.login();
+        fc.login();
+    </script>
+
+</body>
+
+</html>
