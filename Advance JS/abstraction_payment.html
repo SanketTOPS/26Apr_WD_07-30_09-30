@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction + Payment Example</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Abstraction + Payment Example</h1>
+    <hr>
+
+
+    <script>
+        //Parent Class
+        class Payment {
+            pay(amount) {
+                throw new Error("Payment method is required!");
+            }
+        }
+
+        class Gpay extends Payment {
+            pay(amount) {
+                console.log("Paid Rs.:" + amount + "using Google Pay!");
+            }
+        }
+
+        class CreditCard extends Payment {
+            pay(amount) {
+                console.log("Paid Rs.:" + amount + "using CreditCard!");
+            }
+        }
+
+        function makePayment(payment, amount) {
+            payment.pay(amount);
+        }
+
+        makePayment(new Gpay(), 1000);
+        makePayment(new CreditCard, 5000);
+    </script>
+</body>
+
+</html>

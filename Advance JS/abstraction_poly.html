@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction + Polymorphism</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Abstraction + Polymorphism</h1>
+    <hr>
+
+    <script>
+        class Vehicle {
+            start() {
+                throw new Error("Start() must be implemented!");
+            }
+        }
+
+        class Car extends Vehicle {
+            start() {
+                console.log("Car started!")
+            }
+        }
+
+        class Bike extends Vehicle {
+            start() {
+                console.log("Bike started!")
+            }
+        }
+
+        function startVehicle(Vehicle) {
+            Vehicle.start();
+        }
+
+
+        startVehicle(new Car());
+        startVehicle(new Bike());
+    </script>
+
+</body>
+
+</html>

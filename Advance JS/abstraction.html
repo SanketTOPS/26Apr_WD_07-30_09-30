@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Abstraction</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">Basic of Abstraction</h1>
+    <hr>
+
+    <script>
+        //Parent Class
+        class Vehicle {
+            start() {
+                throw new Error("Start() must be implemented!");
+            }
+        }
+
+        //Child class
+        class Car extends Vehicle {
+            start() {
+                console.log("Car started!")
+            }
+        }
+
+        //Child class
+        class Bike extends Vehicle {
+            start() {
+                console.log("Bike started!")
+            }
+        }
+
+        class Bus extends Vehicle {
+        }
+
+
+        let c = new Car();
+        let b = new Bike();
+        let bu = new Bus();
+
+        c.start();
+        b.start();
+        bu.start();
+
+    </script>
+</body>
+
+</html>
