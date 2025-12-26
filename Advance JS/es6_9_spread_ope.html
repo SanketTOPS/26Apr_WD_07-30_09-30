@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Spread operator</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color:blue;">ES6-Spread Operator</h1>
+    <hr>
+
+    <script>
+        /*const arr = [1, 2, 3, 4];
+        //console.log(arr)
+        console.log(...arr);*/
+
+
+        /*const arr = [1, 2, 3, 4];
+        const newarr = arr;
+        console.log(newarr)*/
+
+        /*const arr = [1, 2, 3, 4];
+        const newarr = [...arr, 5];
+        console.log(newarr)*/
+
+        /*const a = [1, 2];
+        const b = [3, 4];
+
+        const x = [...a, ...b];
+        console.log(x)*/
+
+        //Spread oper. with Object
+
+        const user = { name: "Sanket", city: "Rajkot" };
+        const newuser = { ...user };
+
+        console.log(newuser)
+
+        const updateCity = {
+            ...user,
+            city: "Ahmedabad"
+        };
+
+        console.log(updateCity)
+
+    </script>
+</body>
+
+</html>

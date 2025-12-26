@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-4 Template Literal</title>
+</head>
+
+<body style="background-color:aliceblue;">
+    <h1 style="text-align: center;color: blue;">ES6-4 Template Literal</h1>
+    <hr>
+    <script>
+        const newmsg = 'Good Morning!';
+        const msg = "Hello Students!";
+
+        /*console.log(newmsg)
+        console.log(msg)*/
+
+        //Old Way
+        /*const name = "Sanket";
+        console.log("Hello" + name);*/
+
+        //New way using Template Literal
+        /*const name = "Sanket";
+        console.log(`Hello ${name}`);*/
+
+
+        /*const name = 'Sanket';
+        const age = 32;
+
+        console.log(`My Name is ${name} and AGE is ${age}`);*/
+
+
+        /*const a = 34;
+        const b = 56;
+        console.log(`Total:${a + b}`);*/
+
+
+        /* ------------------------------ */
+
+        //const para = "Hello Student!\nGood Morning\nTOPS Technologies";
+        /*const para = `
+        Hello Student
+        Good Monrnig!
+        TOPS Technologies`
+        console.log(para)*/
+
+        /*const isLogin = false;
+        const nmsg = `${isLogin ? "Welcome User!" : "Please Login"}`;
+        console.log(nmsg)*/
+
+
+        const stud = ['Ashok', 'Sanket', 'Hitesh'];
+
+        let list = "<ul>";
+
+        stud.forEach(s => {
+            list += `<li>${s}</li>`;
+        });
+
+        list += "</ul>";
+
+        document.body.innerHTML = list;
+
+    </script>
+</body>
+
+</html>

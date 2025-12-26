@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - Destructing</title>
+</head>
+
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;color: blue;">ES6 - Destructing</h1>
+    <hr>
+
+    <script>
+        //Old Way
+
+        /*const user = { name: "Sanket", age: 32 };
+        const name = user.name;
+        const age = user.age;
+        console.log(name)
+        console.log(age)*/
+
+        // ----------------------------- //
+
+        //Destructuring Way
+        /*const user = { name: "Sanket", age: 32 };
+        const { name, age } = user;*/
+
+
+        //Nested Object
+
+        const student = {
+            name: "Sanket",
+            address: {
+                city: "Rajkot",
+                pin: 360005
+            }
+        };
+
+        const { address: { city, pin } } = student
+        console.log(student.address)
+
+    </script>
+</body>
+
+</html>
